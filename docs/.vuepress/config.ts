@@ -28,94 +28,65 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   themeConfig: {
     // 导航配置
     nav: [
+     
       { text: '首页', link: '/' },
-      {
-        text: '前端',
-        link: '/web/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [
-          // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: '前端文章',
-            items: [
-              { text: 'JavaScript', link: '/pages/8143cc480faf9a11/' },
-            ],
-          },
-          {
-            text: '学习笔记',
-            items: [
-              { text: '《JavaScript教程》', link: '/note/javascript/' },
-              { text: '《JavaScript高级程序设计》', link: '/note/js/' },
-              { text: '《ES6 教程》', link: '/note/es6/' },
-              { text: '《Vue》', link: '/note/vue/' },
-              { text: '《React》', link: '/note/react/' },
-              {
-                text: '《TypeScript 从零实现 axios》',
-                link: '/note/typescript-axios/',
-              },
-              {
-                text: '《Git》',
-                link: '/note/git/',
-              },
-              {
-                text: 'TypeScript',
-                link: '/pages/51afd6/',
-              },
-              {
-                text: 'JS设计模式总结',
-                link: '/pages/4643cd/',
-              },
-            ],
-          },
-        ],
+      { text: 'java基础', link: '/basic/' },
+      { text: 'java进阶', link: '/advanced/',items:[
+        {text:'并发编程',link:'/synchronized/',items:[
+          {text:'并发基础',link:'/pages/e7fe01/'},{text:'ThreadLocal解析',link:'/pages/e29ea2/'},{text:'Synchronized原理',link:'/pages/d39bd9/'}
+        ]},{text:'线程池',link:'/threadpool/',items:[{text:'线程池源码解析',link:'/pages/9ee82e/'}]},{
+          text:'集合',items:[{text:'java集合详解',link:'/pages/99611f/'},{text:'ArrayList源码解读',link:'/pages/2716b1/'},{text:'HashMap源码解读'
+        ,link:'/pages/d97fde/'},{text:'ConcurrentHashMap源码解读',link:'/pages/b1bc86/'},{text:'fast-fail与fast-safe',link:'/pages/4e0db5/'}]
+        },
+        {text:'AQS',items:[{text:'AQS解析',link:'/pages/d96824/'},{text:'JUC工具包',link:'/pages/52ef50/'}]}
+      ] },
+      { text: '数据库', link: '/database/' ,items:[
+
+        {text:'mysql',link:'/mysql/',items:[
+          {text:'mysql索引',items:[{text:'什么是索引下推',link:'/pages/5c7414/'},{text:'索引失效情况',link:'/pages/d05ed2/'},{text:'mysql优化成本计算',link:'/pages/411af3/'}]},
+          {text:'mysql日志',items:[{text:'mysql日志详情',link:'/pages/6bc60e/'},{text:'binlog数据恢复详解',link:'/pages/4267a9/'},{text:'bufferPool详解',link:'/pages/8983b5/'},{text:'你常听说的WAL到底是什么',link:'/pages/8ca146/'}]}
+
+
+
+        ]},{text:'redis',link:'/redis/',items:[{text:'单机下的redis',link:'/singleredis/'},{text:'集群下的redis',link:'/mostredis/',items:[{
+          text:'集群下的redis',link:'/pages/cdfd3b/'  },{text:'redisson详解',link:'/pages/83fd96/'},{text:'raft协议浅析',link:'/pages/ee4ba0/'}
+      ]}]}
+      ]},
+      { text: '常见框架', link: '/structure/' ,
+        items:[
+          {text:'Spring',link:'/Spring/',items:[{text:'spring中的设计模式',link:'/pages/b3691e/'},{text:'spring事务',link:'/pages/6a031f/'}]},
+          {text:'Spring Boot',link:'/springboot/',items:[{text:'自动装配原理',link:'/pages/0eaa16/'}]},
+          {text:'其他',items:[{text:'定时任务',link:'/pages/7cb935/'},{text:'浅入XXL-JOB',link:'/pages/e5591b/'}]}
+        ]
+    
+    },
+      { text: '中间件', link: '/middleware/',items:[{text:'消息队列',items:[{text:'消息队列的特性',link:'/pages/5019cf/'},{text:'消息队列存在的问题',link:'/pages/b9df80/'}]}
+        ,{text:'kafka',items:[{text:'kafka之生产者',link:'/pages/b2eea9/'},{text:'kafka之broker',link:'/pages/3334d8/'},{text:'kafka之消费者',link:'/pages/91dacf/'}]}]
       },
-      {
-        text: '页面',
-        link: '/ui/',
-        items: [
-          { text: 'HTML', link: '/pages/8309a5b876fc95e3/' },
-          { text: 'CSS', link: '/pages/0a83b083bdf257cb/' },
-        ],
-      },
-      {
-        text: '技术',
-        link: '/technology/',
-        items: [
-          { text: '技术文档', link: '/pages/9a7ee40fc232253e/' },
-          { text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/' },
-          { text: 'Nodejs', link: '/pages/117708e0af7f0bd9/' },
-          { text: '博客搭建', link: '/pages/41f87d890d0a02af/' },
-        ],
-      },
-      {
-        text: '更多',
-        link: '/more/',
-        items: [
-          { text: '学习', link: '/pages/f2a556/' },
-          { text: '面试', link: '/pages/aea6571b7a8bae86/' },
-          { text: '心情杂货', link: '/pages/2d615df9a36a98ed/' },
-          { text: '实用技巧', link: '/pages/baaa02/' },
-          { text: '友情链接', link: '/friends/' },
-        ],
-      },
-      { text: '关于', link: '/about/' },
-      {
-        text: '收藏',
-        link: '/pages/beb6c0bd8a66cea6/',
-        // items: [
-        //   { text: '网站', link: '/pages/beb6c0bd8a66cea6/' },
-        //   { text: '资源', link: '/pages/eee83a9211a70f9d/' },
-        //   { text: 'Vue资源', link: '/pages/12df8ace52d493f6/' },
-        // ],
-      },
-      {
-        text: '索引',
-        link: '/archives/',
-        items: [
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
-          { text: '归档', link: '/archives/' },
-        ],
-      },
+      { text: '设计模式', link: '/designmode/' ,
+          items:[{text:'创建型模式',link:'/create/'},
+          {text:'结构型模式',link:'/mode/'},
+          {text:'行为模式',link:'/action/'},]
+    
+    
+    
+    },
+      {text:'微服务',link:'/microservice/',
+      items:[
+        {text:'SpringCloud',link:'/SpringCloud/',items:[
+          {text:'eureka',link:'/eureka/'},
+        ]},
+        {text:'SpringCloud Alibaba',link:'/SpringCloudAlibaba/',items:[{
+          text:'nacos',link:'/nacos/'
+        },]}
+
+      ]
+    },
+      { text: '计算机基础', link: '/computer/',items:[
+
+        {text:'计算机网络',link:'/network/'},{text:'操作系统',link:'operationsystem'}
+      ] },
+      {text:'其他',link:'/other/',items:[{text:'逻辑题',items:[]},{text:'面试',items:[{text:'百度后端实习二面',link:''}]}]},
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo

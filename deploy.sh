@@ -18,7 +18,9 @@ cd $dist_path
 git init
 git add -A
 git commit -m "deploy, $commit_info"
-git push -f $push_addr HEAD:$push_branch
+# git push -f $push_addr HEAD:$push_branch
+git push -f https://github.com/2290653824/2290653824.github.io master
+
 
 cd -
 rm -rf $dist_path

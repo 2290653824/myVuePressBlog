@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # 确保脚本抛出遇到的错误
-set -e
+# set -e
 
 
 push_addr=`git remote get-url -push origin` # git提交地址，也可以手动设置，比如：push_addr=git@github.com:xugaoyi/vuepress-theme-vdoing.git

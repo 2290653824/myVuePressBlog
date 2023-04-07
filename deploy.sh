@@ -21,7 +21,7 @@ git config --global user.name "zhengjian"
 git add -A
 git commit -m "deploy, $commit_info"
 # git push -f $push_addr HEAD:$push_branch
-git push -f https://github.com/2290653824/2290653824.github.io master
+git push -f https://github.com/2290653824/2290653824.github.io master -u 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
 
 
 cd -

@@ -10,7 +10,7 @@ dist_path=docs/.vuepress/dist # 打包生成的文件夹路径
 push_branch=gh-pages # 推送的分支
 
 # 生成静态文件
-npm run build
+# npm run build
 
 # 进入生成的文件夹
 cd $dist_path
@@ -24,7 +24,9 @@ git commit -m "deploy, $commit_info"
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 echo "当前所在分支：${current_branch}"
 # git push -f $push_addr HEAD:$push_branch
-git push -f https://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@github.com/2290653824/2290653824.github.io HEAD:master
+git remote add deploy https://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@github.com/2290653824/2290653824.github.io
+git push deploy master
+# git push -f https://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@github.com/2290653824/2290653824.github.io HEAD:master
 
 
 cd -

@@ -16,6 +16,8 @@ push_branch=gh-pages # 推送的分支
 cd $dist_path
 
 git init
+git config --global user.email "2290653824@qq.com"
+git config --global user.name "zhengjian"
 git add -A
 git commit -m "deploy, $commit_info"
 # git push -f $push_addr HEAD:$push_branch

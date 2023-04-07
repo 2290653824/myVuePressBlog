@@ -24,7 +24,7 @@ git commit -m "deploy, $commit_info"
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 echo "当前所在分支：${current_branch}"
 # git push -f $push_addr HEAD:$push_branch
-git push -f https://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@github.com/2290653824/2290653824.github.io HEAD:master --force
+git push -f https://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@github.com/2290653824/2290653824.github.io HEAD:master
 
 
 cd -

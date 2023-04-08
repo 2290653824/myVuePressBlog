@@ -25,7 +25,7 @@ git commit -m "deploy, $commit_info"
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 echo "当前所在分支：${current_branch}"
 # git push -f $push_addr HEAD:$push_branch
-git remote add deployee "https://${GITHUB_TOKEN}@github.com/2290653824/2290653824.github.io"
+git remote add deploy "https://${GITHUB_TOKEN}@github.com/2290653824/2290653824.github.io"
 git push deploy master
 
 cd -

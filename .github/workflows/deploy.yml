@@ -25,4 +25,6 @@ jobs:
       #   run: pwd
 
       - name: Run script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sh ./deploy.sh

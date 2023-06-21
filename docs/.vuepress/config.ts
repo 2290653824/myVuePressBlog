@@ -81,9 +81,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
       {
         text: '设计模式', link: '/designmode/',
-        items: [{ text: '创建型模式', link: '/create/' },
-        { text: '结构型模式', link: '/mode/' },
-        { text: '行为模式', link: '/action/' },]
+        items: [{text : '七大设计原则',link:'/pages/9685d5/'},{ text: '创建型模式', link: '/create/' },
+        { text: '结构型模式', link: '/structural/' },
+        { text: '行为型模式', link: '/action/' },]
 
 
 
@@ -107,7 +107,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         text: '计算机基础', link: '/computer/', items: [
 
-          { text: '计算机网络', link: '/network/' }, { text: '操作系统', link: 'operationsystem' }
+          { text: '计算机网络', link: '/network/' }, { text: '操作系统', link: '/operationsystem/'},{text : '算法',link: '/algorithm/'}
         ]
       },
       { text: '其他', link: '/other/', items: [{ text: '逻辑题', items: [] }, { text: '面试', items: [{ text: '百度后端实习二面', link: '' }] }] },

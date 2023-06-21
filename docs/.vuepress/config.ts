@@ -28,65 +28,89 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   themeConfig: {
     // 导航配置
     nav: [
-     
+
       { text: '首页', link: '/' },
-      { text: 'java基础', link: '/basic/' },
-      { text: 'java进阶', link: '/advanced/',items:[
-        {text:'并发编程',link:'/synchronized/',items:[
-          {text:'并发基础',link:'/pages/e7fe01/'},{text:'ThreadLocal解析',link:'/pages/e29ea2/'},{text:'Synchronized原理',link:'/pages/d39bd9/'}
-        ]},{text:'线程池',link:'/threadpool/',items:[{text:'线程池源码解析',link:'/pages/9ee82e/'}]},{
-          text:'集合',items:[{text:'java集合详解',link:'/pages/99611f/'},{text:'ArrayList源码解读',link:'/pages/2716b1/'},{text:'HashMap源码解读'
-        ,link:'/pages/d97fde/'},{text:'ConcurrentHashMap源码解读',link:'/pages/b1bc86/'},{text:'fast-fail与fast-safe',link:'/pages/4e0db5/'}]
-        },
-        {text:'AQS',items:[{text:'AQS解析',link:'/pages/d96824/'},{text:'JUC工具包',link:'/pages/52ef50/'}]}
-      ] },
-      { text: '数据库', link: '/database/' ,items:[
-
-        {text:'mysql',link:'/mysql/',items:[
-          {text:'mysql索引',items:[{text:'什么是索引下推',link:'/pages/5c7414/'},{text:'索引失效情况',link:'/pages/d05ed2/'},{text:'mysql优化成本计算',link:'/pages/411af3/'}]},
-          {text:'mysql日志',items:[{text:'mysql日志详情',link:'/pages/6bc60e/'},{text:'binlog数据恢复详解',link:'/pages/4267a9/'},{text:'bufferPool详解',link:'/pages/8983b5/'},{text:'你常听说的WAL到底是什么',link:'/pages/8ca146/'}]}
 
 
+      {
+        text: 'java', link: '/javakownledge/', items: [
+          {
+            text: 'java基础', link : '/javabasic/'
+          },
 
-        ]},{text:'redis',link:'/redis/',items:[{text:'单机下的redis',link:'/singleredis/'},{text:'集群下的redis',link:'/mostredis/',items:[{
-          text:'集群下的redis',link:'/pages/cdfd3b/'  },{text:'redisson详解',link:'/pages/83fd96/'},{text:'raft协议浅析',link:'/pages/ee4ba0/'}
-      ]}]}
-      ]},
-      { text: '常见框架', link: '/structure/' ,
-        items:[
-          {text:'Spring',link:'/Spring/',items:[{text:'spring中的设计模式',link:'/pages/b3691e/'},{text:'spring事务',link:'/pages/6a031f/'}]},
-          {text:'Spring Boot',link:'/springboot/',items:[{text:'自动装配原理',link:'/pages/0eaa16/'}]},
-          {text:'其他',items:[{text:'定时任务',link:'/pages/7cb935/'},{text:'浅入XXL-JOB',link:'/pages/e5591b/'}]}
+          { text: 'java进阶', link: '/javaadvance/'},
         ]
-    
-    },
-      { text: '中间件', link: '/middleware/',items:[{text:'消息队列',items:[{text:'消息队列的特性',link:'/pages/5019cf/'},{text:'消息队列存在的问题',link:'/pages/b9df80/'}]}
-        ,{text:'kafka',items:[{text:'kafka之生产者',link:'/pages/b2eea9/'},{text:'kafka之broker',link:'/pages/3334d8/'},{text:'kafka之消费者',link:'/pages/91dacf/'}]}]
       },
-      { text: '设计模式', link: '/designmode/' ,
-          items:[{text:'创建型模式',link:'/create/'},
-          {text:'结构型模式',link:'/mode/'},
-          {text:'行为模式',link:'/action/'},]
-    
-    
-    
-    },
-      {text:'微服务',link:'/microservice/',
-      items:[
-        {text:'SpringCloud',link:'/SpringCloud/',items:[
-          {text:'eureka',link:'/eureka/'},
-        ]},
-        {text:'SpringCloud Alibaba',link:'/SpringCloudAlibaba/',items:[{
-          text:'nacos',link:'/nacos/'
-        },]}
 
-      ]
-    },
-      { text: '计算机基础', link: '/computer/',items:[
 
-        {text:'计算机网络',link:'/network/'},{text:'操作系统',link:'operationsystem'}
-      ] },
-      {text:'其他',link:'/other/',items:[{text:'逻辑题',items:[]},{text:'面试',items:[{text:'百度后端实习二面',link:''}]}]},
+
+      {
+        text: '数据库', link: '/database/', items: [
+
+          {
+            text: 'mysql', link: '/mysql/', items: [
+              { text: 'mysql索引',link:'/mysqlIndex/', items: [{ text: '什么是索引下推', link: '/pages/5c7414/' }, { text: '索引失效情况', link: '/pages/d05ed2/' }, { text: 'mysql优化成本计算', link: '/pages/411af3/' }] },
+              { text: 'mysql日志', link:'/mysqllog/',items: [{ text: 'mysql日志详情', link: '/pages/6bc60e/' }, { text: 'binlog数据恢复详解', link: '/pages/4267a9/' }, { text: 'bufferPool详解', link: '/pages/8983b5/' }, { text: '你常听说的WAL到底是什么', link: '/pages/8ca146/' }] }
+            ]
+          }, {
+            text: 'redis', link: '/redis/', items: [{ text: '单机下的redis', link: '/singleredis/' }, {
+              text: '集群下的redis', link: '/mostredis/', items: [{
+                text: '集群下的redis', link: '/pages/cdfd3b/'
+              }, { text: 'redisson详解', link: '/pages/83fd96/' }, { text: 'raft协议浅析', link: '/pages/ee4ba0/' }
+              ]
+            }]
+          }
+        ]
+      },
+
+
+
+
+      {
+        text: '常见框架', link: '/structure/',
+        items: [
+          { text: 'Spring', link: '/Spring/', items: [{ text: 'spring中的设计模式', link: '/pages/b3691e/' }, { text: 'spring事务', link: '/pages/6a031f/' }] },
+          { text: 'Spring Boot', link: '/springboot/', items: [{ text: '自动装配原理', link: '/pages/0eaa16/' }] },
+          { text: '其他', items: [{ text: '定时任务', link: '/pages/7cb935/' }, { text: '浅入XXL-JOB', link: '/pages/e5591b/' }] }
+        ]
+
+      },
+      {
+        text: '中间件', link: '/middleware/', items: [{ text: '消息队列', items: [{ text: '消息队列的特性', link: '/pages/5019cf/' }, { text: '消息队列存在的问题', link: '/pages/b9df80/' }] }
+          , { text: 'kafka', items: [{ text: 'kafka之生产者', link: '/pages/b2eea9/' }, { text: 'kafka之broker', link: '/pages/3334d8/' }, { text: 'kafka之消费者', link: '/pages/91dacf/' }] }]
+      },
+      {
+        text: '设计模式', link: '/designmode/',
+        items: [{ text: '创建型模式', link: '/create/' },
+        { text: '结构型模式', link: '/mode/' },
+        { text: '行为模式', link: '/action/' },]
+
+
+
+      },
+      {
+        text: '微服务', link: '/microservice/',
+        items: [
+          {
+            text: 'SpringCloud', link: '/SpringCloud/', items: [
+              { text: 'eureka', link: '/eureka/' },
+            ]
+          },
+          {
+            text: 'SpringCloud Alibaba', link: '/SpringCloudAlibaba/', items: [{
+              text: 'nacos', link: '/nacos/'
+            },]
+          }
+
+        ]
+      },
+      {
+        text: '计算机基础', link: '/computer/', items: [
+
+          { text: '计算机网络', link: '/network/' }, { text: '操作系统', link: 'operationsystem' }
+        ]
+      },
+      { text: '其他', link: '/other/', items: [{ text: '逻辑题', items: [] }, { text: '面试', items: [{ text: '百度后端实习二面', link: '' }] }] },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo

@@ -146,9 +146,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             {
                 text:'工作',link : '/work/',items : [
                     {text : '个人项目',link : '/privateProject/'},
-                    {text:'个人面试面经',link : 'privateInterviewExperience'},
-                    {text : '八股记忆',link : 'stereotypedMemory'},
-                    {text : '工作积累',link : 'workAccumulation'}
+                    {text:'个人面试面经',link : '/privateInterviewExperience/'},
+                    {text : '八股记忆',link : '/stereotypedMemory/'},
+                    {text : '工作积累',link : '/workAccumulation/'}
                 ]
             },
             {

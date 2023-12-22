@@ -41,6 +41,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
                     {text: 'java进阶', link: '/javaadvance/'},
                 ]
             },
+            {
+                text: "大数据",link: "/bigdata/"
+            },
 
 
             {
